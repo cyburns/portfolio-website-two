@@ -41,7 +41,7 @@ export default function Intro() {
               height="292"
               quality="95"
               priority={true}
-              className="flex items-center justify-center sm:h-48 sm:w-48 h-[8rem] w-[8rem] rounded-3xl object-cover bg-white dark:bg-[#333333] bg-opacity-40 shadow-xl pt-4"
+              className="flex items-center justify-center sm:h-48 sm:w-48 h-[8rem] w-[8rem] rounded-full object-cover bg-white dark:bg-[#333333] bg-opacity-40 shadow-xl pt-4"
             />
           </motion.div>
         </div>
@@ -52,22 +52,22 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="sm:text-4xl text-4xl text-center font-semibold  flex items-center  justify-center mb-5 ">
+        <span className="sm:text-4xl text-4xl text-center font-semibold  flex items-center justify-center mb-">
           Cyrus Burns
         </span>
 
-        <span className="sm:text-sm text-lg bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-2xl text-center font-extralight flex items-center  justify-center mb-5">
+        <span className="sm:text-lg text-lg bg-opacity-40  p-2 rounded-lg text-center font-extralight flex items-center  justify-center mb-5">
           Software Engineer
         </span>
 
-        <span className="sm:text-2xl text-3xl text-center font-semibold flex items-center  justify-center">
+        <span className="sm:text-3xl text-3xl text-center font-semibold flex items-center  justify-center">
           <a href="https://www.linkedin.com/in/cyburns/">
-            <LinkedIn className="text-5xl bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full hover:bg-opacity-0" />
+            <LinkedIn className="text-6xl bg-opacity-40  p-2 rounded-full hover:bg-opacity-0 transition hover:scale-110" />
           </a>
-          <div className="flex h-10 w-[.1rem] bg-black dark:bg-white rounded-xl mx-5" />
+          <div className="flex h-12 w-[.1rem] bg-black dark:bg-white rounded-xl mx-3" />
           <Divider />
           <a href="https://github.com/cyburns">
-            <GitHub className="text-5xl bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full hover:bg-opacity-0" />
+            <GitHub className="text-6xl p-2  hover:bg-opacity-0 transition hover:scale-110" />
           </a>
         </span>
       </motion.h1>
@@ -82,7 +82,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full"
+          className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition p-2 hover:underline"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -93,8 +93,8 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full"
-          href="/CV.pdf"
+          className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition p-2 hover:underline"
+          href="/CB_CV.pdf"
           download
         >
           Resume

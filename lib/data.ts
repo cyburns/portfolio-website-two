@@ -5,6 +5,9 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import codesharePic from "@/public/Codeshare-port-pic.png";
+import smartCar from "@/public/ai-car-port-bg.png";
+import techRecruiter from "@/public/techRecruiter-port-bg.png";
 
 export const links = [
   {
@@ -16,12 +19,12 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
   },
   {
     name: "Projects",
@@ -35,11 +38,11 @@ export const links = [
 
 export const experiencesData = [
   {
-    employer: "Cochair",
+    employer: "Seatr",
     title: "Founding Engineer",
     description:
       "Co-founded an innovative app facilitating seamless dinner reservation transactions, empowering users to effortlessly buy, sell, and bid on reservations while connecting with friends in real-time.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(CgWorkAlt),
     date: "2024 - Present",
   },
   {
@@ -47,7 +50,8 @@ export const experiencesData = [
     title: "Full-Stack Software Engineer",
     description:
       "Crafted a cutting-edge React prototyping tool designed to accelerate software development, empowering users to build efficient solutions with unparalleled speed and ease.",
-    icon: React.createElement(CgWorkAlt),
+
+    icon: React.createElement(FaReact),
     date: "2023 - 2024",
   },
 ] as const;
@@ -59,7 +63,7 @@ export const projectsData = [
       description:
         "I worked as a full-stack SWE on this open source porduct which allows users to share code snippets and connect around tech interests.",
       tags: ["React", "Node.js", "Express.js", "MUI", "MongoDB", "Redux"],
-      imageUrl: corpcommentImg,
+      imageUrl: codesharePic,
     },
   ],
   [
@@ -68,7 +72,7 @@ export const projectsData = [
       description:
         "I developed an AI car using vanilla JavaScript, leveraging OOP and machine learning to enable autonomous navigation through a neural network of sensors.",
       tags: ["JavaScript", "HTML5", "CSS", "OOP", "ML", "AI", "NN"],
-      imageUrl: rmtdevImg,
+      imageUrl: smartCar,
     },
   ],
   [
@@ -77,7 +81,7 @@ export const projectsData = [
       description:
         "I developed a web app to streamline tech job searches. The platform simplifies the process, offering advanced search features and real-time updates.",
       tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-      imageUrl: wordanalyticsImg,
+      imageUrl: techRecruiter,
     },
   ],
 ] as const;
@@ -90,12 +94,12 @@ export const skillsData = [
   "Express",
   "Redux",
   "Redux Toolkit",
-  "MUI",
+  "React Native",
   "Tailwind.css",
   "Framer-Motion",
   "HTML",
   "CSS",
-  "WebSocket",
+  "Expo Router",
   "Socket.io",
   "MongoDB",
   "Mongoose",

@@ -9,13 +9,12 @@ import { motion } from "framer-motion";
 let randomNeg = Math.floor(Math.random() * (-100 - -200 + 1)) - 200;
 let randomPos = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
 let randomNumber = 150;
-randomNumber = randomNumber > 0 ? randomPos : randomNeg
 
 const fadeInAnimationVariants = {
   initial: (index: number) => ({
     opacity: 0,
     y: 300,
-    x: randomNumber > 0 ? randomPos : randomNeg,
+    x: index % 5 === 0 ? randomPos : randomNeg,
   }),
   animate: (index: number) => ({
     opacity: 1,
@@ -41,7 +40,7 @@ export default function Skills() {
       <ul className="flex flex-wrap justify-center gap-2 text-md text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 shadow-lg"
+            className="bg-[] borderBlack rounded-xl px-5 py-3 dark:bg-[#252526] dark:text-white/80 shadow-lg"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
