@@ -16,9 +16,13 @@ export default function Experience() {
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section
+      id="experience"
+      ref={ref}
+      className="scroll-mt-7 h-[58rem] bg-white dark:bg-black bg-opacity-40  p-7 rounded-2xl shadow-xl max-w-[40rem]  sm:mb-10"
+    >
       <SectionHeading>Experience</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="" layout={"1-column-left"}>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement

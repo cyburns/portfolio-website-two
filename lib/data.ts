@@ -66,16 +66,16 @@ export const projectsData = [
     {
       title: "SmartCar",
       description:
-        "I developed an AI-powered car using vanilla JavaScript, leveraging OOP and machine learning to enable autonomous navigation around traffic through a neural network of sensors.",
+        "I developed an AI car using vanilla JavaScript, leveraging OOP and machine learning to enable autonomous navigation through a neural network of sensors.",
       tags: ["JavaScript", "HTML5", "CSS", "OOP", "ML", "AI", "NN"],
       imageUrl: rmtdevImg,
     },
   ],
   [
     {
-      title: "Jsearch",
+      title: "TechRecruiter",
       description:
-        "My team and I developed a web app to streamline tech job searches. The platform simplifies the process, offering advanced search features and real-time updates.",
+        "I developed a web app to streamline tech job searches. The platform simplifies the process, offering advanced search features and real-time updates.",
       tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
       imageUrl: wordanalyticsImg,
     },

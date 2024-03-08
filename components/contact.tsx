@@ -8,6 +8,7 @@ import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
+
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
 
@@ -15,7 +16,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-28 text-center bg-white dark:bg-black bg-opacity-40  rounded-2xl shadow-xl mt-10 max-w-[60rem] py-10 w-full sm:px-36 px-4"
       initial={{
         opacity: 0,
       }}
@@ -33,8 +34,8 @@ export default function Contact() {
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
+        <a className="underline" href="cyrusburns@gmail.com">
+          cyrusburns@gmail.com
         </a>{" "}
         or through this form.
       </p>

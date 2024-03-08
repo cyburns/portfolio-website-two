@@ -59,8 +59,10 @@ export default function Products() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full my-40">
-      <SectionHeading>Open Source</SectionHeading>
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col mx-auto w-full bg-white dark:bg-black bg-opacity-40  rounded-2xl shadow-xl max-w-[60rem] min-h-[35rem] mt-10 sm:mt-0 p-7">
+      <h2 className="flex items-center justify-center text-center text-4xl font-medium capitalize mb-8">
+        Open Source
+      </h2>
       <Tabs tabs={tabs} />
     </div>
   );

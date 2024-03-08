@@ -22,7 +22,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="max-w-[40rem] scroll-mt-[100rem] bg-white p-8 sm:p-14 rounded-xl bg-opacity-30 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75   h-[30rem] sm:mr-10 mr-0 min-w-full sm:min-w-fit mb-10 lg:mb-0"
+      className="max-w-[40rem] scroll-mt-[100rem] bg-white p-8 sm:p-9 rounded-xl bg-opacity-30 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75  sm:mr-10 mr-0 min-w-full sm:min-w-fit mb-10 lg:mb-0 h-[38rem]"
     >
       <div className="mb-7">
         <div className="relative flex items-center justify-center">
@@ -35,13 +35,13 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/../public/pfp.png"
+              src="/../public/apple-port-memoji.png"
               alt="Portrait"
               width="292"
               height="292"
               quality="95"
               priority={true}
-              className="sm:h-48 sm:w-48 h-[8rem] w-[8rem] rounded-full object-cover border-[0.35rem] border-white shadow-xl "
+              className="flex items-center justify-center sm:h-48 sm:w-48 h-[8rem] w-[8rem] rounded-3xl object-cover bg-white dark:bg-[#333333] bg-opacity-40 shadow-xl pt-4"
             />
           </motion.div>
         </div>
@@ -52,20 +52,28 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="sm:text-2xl text-3xl text-center font-semibold  flex items-center  justify-center mb-5">
+        <span className="sm:text-4xl text-4xl text-center font-semibold  flex items-center  justify-center mb-5 ">
           Cyrus Burns
         </span>
 
+        <span className="sm:text-sm text-lg bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-2xl text-center font-extralight flex items-center  justify-center mb-5">
+          Software Engineer
+        </span>
+
         <span className="sm:text-2xl text-3xl text-center font-semibold flex items-center  justify-center">
-          <LinkedIn className="text-3xl" />
+          <a href="https://www.linkedin.com/in/cyburns/">
+            <LinkedIn className="text-5xl bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full hover:bg-opacity-0" />
+          </a>
           <div className="flex h-10 w-[.1rem] bg-black dark:bg-white rounded-xl mx-5" />
           <Divider />
-          <GitHub className="text-3xl" />
+          <a href="https://github.com/cyburns">
+            <GitHub className="text-5xl bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full hover:bg-opacity-0" />
+          </a>
         </span>
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-col items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -74,23 +82,23 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group  text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none  hover:bg-gray-950 active:scale-105 transition"
+          className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
           Contact
-          <ArrowForwardIos className="opacity-70 group-hover:translate-x-1 transition" />
+          <ArrowForwardIos sx={{ fontSize: "1rem" }} className="opacity-70 " />
         </Link>
 
         <a
-          className="group  px-7 py-3 flex items-center gap-2 rounded-full outline-none active:scale-105 transition cursor-pointer  "
+          className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition bg-white dark:bg-[#333333] bg-opacity-40  p-2 rounded-full"
           href="/CV.pdf"
           download
         >
-          <FileDownload className="opacity-60 " />
           Resume
+          <FileDownload sx={{ fontSize: "1.2rem" }} className="opacity-70 " />
         </a>
       </motion.div>
     </section>
