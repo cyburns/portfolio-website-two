@@ -49,7 +49,7 @@ export const experiencesData = [
     employer: "ReacType",
     title: "Full-Stack Software Engineer",
     description:
-      "Crafted a cutting-edge React prototyping tool designed to accelerate software development, empowering users to build efficient solutions with unparalleled speed and ease.",
+      "A cutting-edge React prototyping tool designed to accelerate software development, empowering users to build efficient solutions with unparalleled speed and ease.",
 
     icon: React.createElement(FaReact),
     date: "2023 - 2024",
@@ -61,7 +61,7 @@ export const projectsData = [
     {
       title: "Codeshare",
       description:
-        "I worked as a full-stack SWE on this open source porduct which allows users to share code snippets and connect around tech interests.",
+        "Web app which allows users to share code snippets and connect around tech backgrounds and interests.",
       tags: ["React", "Node.js", "Express.js", "MUI", "MongoDB", "Redux"],
       imageUrl: codesharePic,
     },
@@ -114,7 +114,6 @@ export const skillsData = [
   "Three.js",
   "Shadcd/ui",
   "Aceturnity",
-  "ChatGPT",
   "AutoCAD",
   "PhotoShop",
   "Figma",
