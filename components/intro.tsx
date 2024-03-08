@@ -41,7 +41,7 @@ export default function Intro() {
               height="292"
               quality="95"
               priority={true}
-              className="flex items-center justify-center sm:h-48 sm:w-48 h-[8rem] w-[8rem] rounded-full object-cover bg-white dark:bg-[#333333] bg-opacity-40 shadow-xl pt-4"
+              className="flex items-center justify-center sm:h-48 sm:w-48 h-[8rem] w-[8rem] rounded-full object-cover bg-white dark:bg-[#333333] bg-opacity-40 shadow-xl pt-4 z-30"
             />
           </motion.div>
         </div>
