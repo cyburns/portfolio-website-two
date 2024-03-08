@@ -13,6 +13,7 @@ import {
   FileDownload,
 } from "@mui/icons-material";
 import { Divider } from "@mui/material";
+import memojiIcon from "@/public/apple-port-memoji.png";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -35,7 +36,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/../public/apple-port-memoji.png"
+              src={memojiIcon}
               alt="Portrait"
               width="292"
               height="292"
