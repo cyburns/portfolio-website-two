@@ -16,3 +16,4 @@ export default function ThemeSwitch() {
     </button>
   );
 }
+

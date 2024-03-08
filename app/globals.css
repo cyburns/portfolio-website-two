@@ -13,3 +13,21 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+@media screen and (max-width: 768px) {
+  .center-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}

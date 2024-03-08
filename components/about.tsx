@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[40rem] sm:mb-0 scroll-mt-[100rem] bg-white p-8 sm:p-14 rounded-xl bg-opacity-30 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 h-[30rem]"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -19,30 +19,16 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
-
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        As a seasoned full-stack software engineer, I've honed my skills across
+        a plethora of technologies and frameworks, adept at seamlessly
+        navigating the complexities of both front-end interfaces and back-end
+        systems. My journey in the industry has been defined by my passion for
+        innovation and problem-solving, constantly driven by the thrill of
+        building and tinkering with code. From architecting scalable solutions
+        to crafting elegant user experiences, I thrive on the creative process
+        of transforming ideas into impactful, functional products. Beyond the
+        confines of the digital realm, I prioritize maintaining a healthy
+        work-life balance through regular and heavy.
       </p>
     </motion.section>
   );
