@@ -23,7 +23,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="max-w-[40rem] scroll-mt-[100rem] bg-white p-8 sm:p-9 rounded-xl bg-opacity-30 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75  sm:mr-10 mr-0 min-w-full sm:min-w-fit mb-10 lg:mb-0 h-[38rem]"
+      className="max-w-[40rem] scroll-mt-[100rem] bg-white p-8 sm:p-9 rounded-xl bg-opacity-30 shadow-xl shadow-black/[0.03] backdrop-blur-[0.5rem]  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75  sm:mr-10 mr-0 min-w-full sm:min-w-fit mb-10 lg:mb-0 h-[38rem]"
     >
       <div className="mb-7">
         <div className="relative flex items-center justify-center">
