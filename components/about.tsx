@@ -38,7 +38,8 @@ export default function About() {
       <p className="mb-3">
         I'm currently immersed in developing a cutting-edge mobile application
         for a startup using React Native with Expo Router for the core of our
-        front-end while using Express and Firebase for our back-end.
+        front-end while using Express and Firebase for our back-end and hosted
+        on AWS.
       </p>
     </motion.section>
   );
