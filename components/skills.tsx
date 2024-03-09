@@ -4,28 +4,6 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-
-let randomNeg = Math.floor(Math.random() * (-100 - -200 + 1)) - 200;
-let randomPos = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
-let randomNumber = 150;
-
-const fadeInAnimationVariants = {
-  initial: (index: number) => ({
-    opacity: 0,
-    y: 300,
-    x: index % 5 === 0 ? randomPos : randomNeg,
-  }),
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    x: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
-
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
@@ -39,23 +17,12 @@ export default function Skills() {
       <SectionHeading>Technical Skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-md text-gray-800">
         {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-[] borderBlack rounded-xl px-5 py-3 dark:bg-[#252526] dark:text-white/80 shadow-lg"
+          <li
+            className="bg-[] borderBlack rounded-xl px-5 py-3 dark:bg-[#252526] dark:text-white/80 shadow-lg transition hover:scale-105"
             key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 0.5 },
-            }}
-            custom={index}
           >
             {skill}
-          </motion.li>
+          </li>
         ))}
       </ul>
     </section>
