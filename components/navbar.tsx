@@ -23,15 +23,18 @@ const Header = () => {
       id="header"
       className={
         isMobileMenuOpen
-          ? "active expanded-header border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-          : "border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+          ? "active border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+          : " border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
       }
     >
       <div className="container m-10">
         <nav className="nav text-black dark:text-white ">
           <ul className="nav-list nav-list-larger">
             {links.map((link, index) => (
-              <li className="nav-item " key={link.hash}>
+              <li
+                className="flex items-center justify-center w-[62vw] sm:w-[95vw]"
+                key={link.hash}
+              >
                 <Link
                   key={index}
                   href={link.hash}
@@ -43,7 +46,7 @@ const Header = () => {
                   className="nav-link hover:text-gray-700 dark:hover:text-gray-400 "
                 >
                   {link.name}
-                  <div className="bg-gray-900 dark:bg-gray-200 w-96 h-1 rounded-xl bg-opacity-30 dark:bg-opacity-30 flex items-center justify-center"></div>
+                  <div className="bg-gray-900 dark:bg-gray-200 w-96 h-[2px] rounded-xl bg-opacity-30 dark:bg-opacity-30 flex items-center justify-center" />
                 </Link>
               </li>
             ))}

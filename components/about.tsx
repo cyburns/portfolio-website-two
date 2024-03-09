@@ -29,7 +29,7 @@ export default function About() {
         and problem-solving, constantly driven by the thrill of building and
         tinkering with code. Beyond the confines of the digital realm, I
         prioritize maintaining a healthy work-life balance through regular and
-        heavy.
+        heavy weight-lifting sessions.
       </p>
 
       <h2 className=" text-4xl font-medium capitalize mt-8 mb-4">
