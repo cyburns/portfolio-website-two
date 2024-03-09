@@ -1,65 +1,71 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+import React, { useState } from "react";
+import ThemeSwitch from "./theme-switch";
 import Link from "next/link";
-import clsx from "clsx";
+import {
+  GitHub,
+  LinkedIn,
+  Language,
+  Groups,
+  Assignment,
+} from "@mui/icons-material";
+import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-export default function Header() {
+const Header = () => {
+  const [isMobileMenuOpen, toggleMobileMenu] = useState(false);
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]  sm:h-[6.25rem]  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
-
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[1.1rem] font-medium text-black sm:w-[initial] sm:flex-nowrap sm:gap-5 dark:text-white">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-white dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
+    <header
+      id="header"
+      className={
+        isMobileMenuOpen
+          ? "active expanded-header border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+          : "border-opacity-20 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+      }
+    >
+      <div className="container m-10">
+        <nav className="nav text-black dark:text-white ">
+          <ul className="nav-list nav-list-larger">
+            {links.map((link, index) => (
+              <li className="nav-item " key={link.hash}>
+                <Link
+                  key={index}
+                  href={link.hash}
+                  onClick={() => {
+                    toggleMobileMenu(false);
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                  className="nav-link hover:text-gray-700 dark:hover:text-gray-400 "
+                >
+                  {link.name}
+                  <div className="bg-gray-900 dark:bg-gray-200 w-96 h-1 rounded-xl bg-opacity-30 dark:bg-opacity-30 flex items-center justify-center"></div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="nav-list nav-list-mobile flex">
+            <li className="left nav-item">
+              <a href="/" className="nav-link nav-link-cb"></a>
+            </li>
+            <li className="right nav-item">
+              <div
+                className="mobile-menu"
+                onClick={() => toggleMobileMenu(!isMobileMenuOpen)}
               >
-                {link.name}
-
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
+                <span className="line line-top bg-gray-500 dark:bg-gray-300"></span>
+                <span className="line line-bottom bg-gray-500 dark:bg-gray-300"></span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
