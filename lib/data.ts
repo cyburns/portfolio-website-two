@@ -41,7 +41,7 @@ export const experiencesData = [
     employer: "Seatr",
     title: "Founding Engineer",
     description:
-      "Co-founded an innovative app facilitating seamless dinner reservation transactions, empowering users to effortlessly buy, sell, and bid on reservations while connecting with friends in real-time.",
+      "Co-founded an innovative peer-to-peer marketplace mobile application using technologies like React Native, Zustand, Firebase and more.",
     icon: React.createElement(CgWorkAlt),
     date: "2024 - Present",
   },
