@@ -43,7 +43,7 @@ export default function Contact({ setContactWindow }: Props) {
     >
       <div className="flex justify-end text-4xl">
         <button
-          className="bg-gray-200 dark:bg-gray-600 w-10 h-10  rounded-full text-center flex items-center justify-center"
+          className="bg-gray-200 dark:bg-[#333333] w-10 h-10  rounded-full text-center flex items-center justify-center"
           onClick={() => setContactWindow(false)}
         >
           <Close className="transition hover:scale-110" />
