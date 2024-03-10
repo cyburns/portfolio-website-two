@@ -15,13 +15,10 @@ interface Props {
 }
 
 export default function Contact({ setContactWindow }: Props) {
-  const { ref } = useSectionInView("Contact");
-
   return (
     <motion.section
       id="contact"
-      ref={ref}
-      className="fixed bottom-32 sm:bottom-[20rem]  w-96 sm:w-full backdrop:text-center bg-white dark:bg-black rounded-2xl shadow-xl max-w-[40rem] py-10 sm:px-10 px-4 z-[99999]"
+      className="fixed bottom-32 sm:bottom-[20rem] w-96 sm:w-full backdrop:text-center bg-white dark:bg-black rounded-2xl shadow-xl max-w-[40rem] py-10 sm:px-10 px-4 z-[99999]"
       initial={{
         opacity: 0,
         y: 300,
