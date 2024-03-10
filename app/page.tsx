@@ -6,6 +6,7 @@ import Intro from "@/components/intro";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import Colors from "@/components/colors";
+import ContactButton from "@/components/contact-button";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
         <Skills />
       </div>
       <Products />
-      <Contact />
+      {/* <Contact /> */}
+      <ContactButton />
       <Colors />
     </main>
   );

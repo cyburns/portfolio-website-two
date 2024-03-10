@@ -1,43 +1,64 @@
 "use client";
 
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import { Close } from "@mui/icons-material";
 
-export default function Contact() {
+interface Props {
+  setContactWindow: Dispatch<SetStateAction<boolean>>;
+  isContactWindowOpen: Boolean;
+}
+
+export default function Contact({ setContactWindow }: Props) {
   const { ref } = useSectionInView("Contact");
 
   return (
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 text-center bg-white dark:bg-black bg-opacity-40  rounded-2xl shadow-xl mt-10 max-w-[60rem] py-10 w-full sm:px-36 px-4"
+      className="fixed bottom-32 sm:bottom-[20rem]  w-96 sm:w-full backdrop:text-center bg-white dark:bg-black rounded-2xl shadow-xl max-w-[40rem] py-10 sm:px-10 px-4 z-[99999]"
       initial={{
         opacity: 0,
+        y: 300,
       }}
       whileInView={{
         opacity: 1,
+        y: 0,
       }}
       transition={{
-        duration: 1,
+        duration: 0.35,
       }}
       viewport={{
         once: true,
       }}
+      exit={{
+        y: 300,
+        opacity: 0,
+      }}
     >
+      <div className="flex justify-end text-4xl">
+        <button
+          className="bg-gray-200 dark:bg-gray-600 w-10 h-10  rounded-full text-center flex items-center justify-center"
+          onClick={() => setContactWindow(false)}
+        >
+          <Close className="transition hover:scale-110" />
+        </button>
+      </div>
       <SectionHeading>Contact</SectionHeading>
-
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please email{" "}
-        <a className="underline" href="cyrusburns@gmail.com">
-          cyrusburns@gmail.com
-        </a>{" "}
-        or submit this form.
-      </p>
+      <div className="flex items-center justify-center text-center w-full">
+        <p className="text-gray-700 -mt-6 dark:text-white/80">
+          Please email{" "}
+          <a className="underline" href="cyrusburns@gmail.com">
+            cyrusburns@gmail.com
+          </a>{" "}
+          or submit this form.
+        </p>
+      </div>
 
       <form
         className="mt-10 flex flex-col dark:text-black"
