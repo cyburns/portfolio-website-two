@@ -29,7 +29,6 @@ export default function ContactButton() {
                 opacity: 0,
               }}
               className="active-message  w-full"
-              onClick={() => setContactWindow(!isContactWindowOpen)}
             >
               <div className="flex justify-center items-center">
                 <Contact
