@@ -97,7 +97,7 @@ export default function Intro() {
 
           <a
             className="group  text-black dark:text-white px-7 py-3 flex text-center justify-center items-center gap-2  outline-none  hover:bg-opacity-0 dark:hover:bg-opacity-0  active:scale-105 transition p-2 hover:underline"
-            href="/CB_CV.pdf"
+            href="/Cyrus Burns rv3.pdf"
             download
           >
             Resume
