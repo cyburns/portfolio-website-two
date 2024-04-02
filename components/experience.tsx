@@ -27,8 +27,7 @@ export default function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
-                background:
-                  theme === "light" ? "#f3f4f6" : "#252526",
+                background: theme === "light" ? "#f3f4f6" : "#252526",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
@@ -51,10 +50,20 @@ export default function Experience() {
               <h3 className="font-semibold capitalize text-center mb-5 text-3xl">
                 {item.employer}
               </h3>
-              <p className="font-normal !mt-0 text-lg mb-3">{item.title}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <p className="font-semibold !mt-0 text-3xl mb-10">{item.title}</p>
+              <p className="!font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
+              <div className="mt-5">
+                {item.bullets.map((bullet, index) => (
+                  <li
+                    key={index}
+                    className="!font-normal text-gray-700 dark:text-white/75 my-2"
+                  >
+                    {bullet}
+                  </li>
+                ))}
+              </div>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

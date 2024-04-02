@@ -30,19 +30,17 @@ export const links = [
 
 export const experiencesData = [
   {
-    employer: "Seatr",
-    title: "Founding Engineer",
-    description:
-      "Co-founded an innovative peer-to-peer marketplace mobile application using technologies like React Native, Zustand, Firebase and more.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2024 - Present",
-  },
-  {
     employer: "ReacType",
     title: "Full-Stack Software Engineer",
     description:
-      "A cutting-edge React prototyping tool designed to accelerate software development, empowering users to build efficient solutions with unparalleled speed and ease.",
-
+      "A cutting-edge React prototyping tool designed to accelerate software development, empowering users to build efficient solutions with unparalleled speed.",
+    bullets: [
+      "Developed a full-stack application using React, Redux, Node.js, Express.js, and MongoDB hosted with AWS.",
+      "Implemented a real-time collaboration feature using Socket.io.",
+      "Designed a custom WYSIWYG editor.",
+      "Achieved a 30x improvement in bundle time by strategically restructuring file architecture, continuously updating configuration files, optimizing dependencies, and successfully migrating ReacType’s immense codebase from Webpack to Vite.",
+      "Engineered a scalable video meeting interface by integrating VideoSDK throughout Node.js and Express, optimizing middleware utilization.",
+    ],
     icon: React.createElement(FaReact),
     date: "2023 - 2024",
   },

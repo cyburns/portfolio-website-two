@@ -33,6 +33,8 @@ export default function RootLayout({
 
         <div className="bg-[#fe8e01] absolute top-[-6rem] -z-10 right-[35%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#fe8e01] invisible sm:visible"></div>
 
+        {/* <div className="bg-white dark:bg-black bg-opacity-30 absolute top-0 -z-1 right-0 h-screen w-screen  blur-[30rem] invisible sm:visible"></div> */}
+
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
