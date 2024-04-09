@@ -30,17 +30,18 @@ export const links = [
 
 export const experiencesData = [
   {
+    employer: "Auda",
+    title: "Founding Engineer",
+    description:
+      "Auda is a mobile app which allows users to Share and discover new music with friends. Auda builds technologies that help people connect, find communities, and grow businesses around music. We used technologies like React Native, Expo, Node.js, Express, Redux, and Google Cloud. We also want to put an emphasis on community-created content like playlists and events. Please reach out with any concerns, bugs, or ideas!",
+    icon: React.createElement(FaReact),
+    date: "2023 - 2024",
+  },
+  {
     employer: "ReacType",
     title: "Full-Stack Software Engineer",
     description:
-      "A cutting-edge React prototyping tool designed to accelerate software development, empowering users to build efficient solutions with unparalleled speed.",
-    bullets: [
-      "Developed a full-stack application using React, Redux, Node.js, Express.js, and MongoDB hosted with AWS.",
-      "Implemented a real-time collaboration feature using Socket.io.",
-      "Designed a custom WYSIWYG editor.",
-      "Achieved a 30x improvement in bundle time by strategically restructuring file architecture, continuously updating configuration files, optimizing dependencies, and successfully migrating ReacType’s immense codebase from Webpack to Vite.",
-      "Engineered a scalable video meeting interface by integrating VideoSDK throughout Node.js and Express, optimizing middleware utilization.",
-    ],
+      "ReacType, is an innovative prototyping interface that empowers users to visualize their application architecture dynamically. With its intuitive drag-and-drop canvas interface and interactive, real-time component code preview, ReacType facilitates seamless collaboration, connection with peers.",
     icon: React.createElement(FaReact),
     date: "2023 - 2024",
   },
