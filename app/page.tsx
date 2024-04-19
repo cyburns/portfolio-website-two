@@ -10,7 +10,7 @@ import ContactButton from "@/components/contact-button";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4 ">
+    <main className="flex flex-col items-center px-4">
       <div className="flex flex-col lg:flex-row items-center justify-center max-w-[60rem]">
         <Intro />
         <About />

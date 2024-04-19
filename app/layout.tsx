@@ -25,15 +25,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#f5f5f7] text-gray-950 relative pt-28 sm:pt-18 dark:bg-[#0f0f0f] dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className="bg-[#0478cc] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#0478cc] invisible sm:visible"></div>
+        <div className="bg-[#0478cc] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#0478cc] invisible sm:visible" />
 
-        <div className="bg-[#fe2400] absolute top-[-1rem] -z-10 left-[-55rem] h-[21.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-38rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#fe2400] invisible sm:visible"></div>
+        <div className="bg-[#13fffd] absolute top-[-6rem] -z-10 right-[25%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#13fffd] invisible sm:visible" />
 
-        <div className="bg-[#13fffd] absolute top-[-6rem] -z-10 right-[25%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#13fffd] invisible sm:visible"></div>
+        <div className="bg-[#fe8e01] absolute top-[-6rem] -z-10 right-[35%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#fe8e01] invisible sm:visible" />
 
-        <div className="bg-[#fe8e01] absolute top-[-6rem] -z-10 right-[35%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#fe8e01] invisible sm:visible"></div>
-
-        {/* <div className="bg-white dark:bg-black bg-opacity-30 absolute top-0 -z-1 right-0 h-screen w-screen  blur-[30rem] invisible sm:visible"></div> */}
+        <div className="bg-[#fe2400] absolute top-[-1rem] -z-10 left-0 h-[21.25rem] w-[10rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-38rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#fe2400] invisible sm:visible" />
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
