@@ -3,7 +3,6 @@
 import React, { Dispatch, SetStateAction } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
@@ -18,7 +17,7 @@ export default function Contact({ setContactWindow }: Props) {
   return (
     <motion.section
       id="contact"
-      className="fixed bottom-32 sm:bottom-[20rem] w-96 sm:w-full backdrop:text-center bg-white dark:bg-black rounded-2xl shadow-xl max-w-[40rem] py-10 sm:px-10 px-4 z-[99999]"
+      className="mt-20 w-96 sm:w-full backdrop:text-center bg-white dark:bg-black rounded-2xl shadow-xl max-w-[40rem] py-10 sm:px-10 px-4 z-[99999]"
       initial={{
         opacity: 0,
         y: 300,
