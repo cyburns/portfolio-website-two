@@ -31,7 +31,7 @@ export const links = [
 export const experiencesData = [
   {
     employer: "Auda",
-    title: "Founding Engineer",
+    title: "Software Engineer",
     description:
       "Auda is a mobile app which allows users to Share and discover new music with friends. Auda builds technologies that help people connect, find communities, and grow businesses around music. We used technologies like React Native, Expo, Node.js, Express, Redux, and Google Cloud. We also want to put an emphasis on community-created content like playlists and events. Please reach out with any concerns, bugs, or ideas!",
     icon: React.createElement(FaReact),
@@ -39,7 +39,7 @@ export const experiencesData = [
   },
   {
     employer: "ReacType",
-    title: "Full-Stack Software Engineer",
+    title: "Software Engineer",
     description:
       "ReacType, is an innovative prototyping interface that empowers users to visualize their application architecture dynamically. With its intuitive drag-and-drop canvas interface and interactive, real-time component code preview, ReacType facilitates seamless collaboration, connection with peers.",
     icon: React.createElement(FaReact),

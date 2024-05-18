@@ -6,7 +6,6 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
-import ContactButton from "@/components/contact-button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,23 +24,21 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#f5f5f7] text-gray-950 relative pt-28 sm:pt-18 dark:bg-[#0f0f0f] dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className="bg-[#0478cc] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#0478cc] invisible sm:visible" />
+        <div className="bg-[#f0ab3d] absolute top-[-6rem] -z-10 left-[15rem] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]  invisible sm:visible" />
 
-        <div className="bg-[#13fffd] absolute top-[-6rem] -z-10 right-[25%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#13fffd] invisible sm:visible" />
+        <div className="bg-[#53ccd4] absolute top-[-6rem] -z-10 right-[15%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[58.75rem]  ?invisible sm:visible" />
 
-        <div className="bg-[#fe8e01] absolute top-[-6rem] -z-10 right-[35%] h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#fe8e01] invisible sm:visible" />
+        <div className="bg-[#0c52cc] absolute top-[-6rem] -z-10 right-0 h-[41.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[48.75rem]  invisible sm:visible" />
 
-        <div className="bg-[#fe2400] absolute top-[-1rem] -z-10 left-0 h-[21.25rem] w-[10rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-38rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#fe2400] invisible sm:visible" />
+        <div className="bg-[#f25920] absolute top-[1rem] -z-10 left-[-20rem] h-[41.25rem] w-[41.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] invisible sm:visible" />
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
             <Footer />
-
             <Toaster position="top-right" />
             <ThemeSwitch />
-            {/* <ContactButton /> */}
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
